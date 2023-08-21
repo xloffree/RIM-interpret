@@ -11,7 +11,7 @@ Use pip to install RIM-interpret.
 RIM-interpret is compatible with most linear and tree-based regression models. In the future, we hope to expand the compatibility to inlcude more regression models and an option for classification tasks.
 
 ```python
-import RIM-interpret
+import RIM_interpret
 
 import sklearn
 import pandas as pd
@@ -39,10 +39,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 en_model = ElasticNet(alpha = 0.1, l1_ratio = 0.5)
 fit_en = en_model.fit(X_train, y_train)
 #Create dataframes to test
-pfi_df_en = get_pfi(fit=fit_en, X_test=X_test, y_test=y_test)
-shap_df_en = get_shap(fit=fit_en, X_test=X_test, model_type="Linear")
-lime_df_en = get_lime(fit=fit_en, X_train=X_train, X_test=X_test)
-inter_df_en = get_inter(fit=fit_en, X_train=X_train, X_test=X_test, y_test=y_test model_type="Linear")
+pfi_df_en = RIM_interpret.get_pfi(fit=fit_en, X_test=X_test, y_test=y_test)
+shap_df_en = RIM_interpret.get_shap(fit=fit_en, X_test=X_test, model_type="Linear")
+lime_df_en = RIM_interpret.get_lime(fit=fit_en, X_train=X_train, X_test=X_test)
+inter_df_en = RIM_interpret.get_inter(fit=fit_en, X_train=X_train, X_test=X_test, y_test=y_test model_type="Linear")
 
 ```
 
