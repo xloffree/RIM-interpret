@@ -6,9 +6,11 @@ RIM-interpret is a Python package designed to enhance the interpretability of ma
 
 Use pip to install RIM-interpret.
 
+```pip install RIM-interpret```
+
 ## Usage
 
-RIM-interpret is compatible with most linear and tree-based regression models. In the future, we hope to expand the compatibility to inlcude more regression models and an option for classification tasks.
+RIM-interpret is compatible with most linear and tree-based regression models. In the future, we hope to expand the compatibility to include more regression models and an option for classification tasks.
 
 ```python
 import RIM_interpret
